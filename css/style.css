@@ -1,28 +1,159 @@
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
     text-decoration: none;
     list-style: none;
 }
-html{
-    background-color: rgba(168, 207, 243, 0.692);
-}
-body{
-    background-color: rgba(148, 188, 226, 0.692);;
-    width: 80vw;
-    margin: 0 auto;
-}
-/* Основные общие настройки */
-.blok{
-    width: 100%;
-    display: grid;
-}
-/* 1. Шапка, содержащая логотип, телефон компании и кнопку для заказа звонка;  */
-#item1{
-height: 25vw;
-}
-#item1>img{
-    height:inherit;
+
+@font-face {
+    font-family: myfont;
+    src: url('../fonts/GardensC.otf');
 }
 
+body {
+    background-color: rgba(148, 188, 226, 0.692);
+    width: 80vw;
+    margin: 0 auto;
+    font-family: myfont;
+}
+
+/* Основные общие настройки */
+.blok {
+    width: 100%;
+    display: grid;
+    margin: 5vw auto;
+}
+
+button {
+    font-family: myfont;
+}
+
+/* 1. Шапка, содержащая логотип, телефон компании и кнопку для заказа звонка;  */
+#item1 {
+    height: 25vw;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+#item1>img, article {
+    width: 15vw;
+    margin: auto;
+}
+
+h1 {
+    font-size: 12vw;
+    margin: auto;
+    color: black;
+}
+
+/* 2. Блок со слайдером, содержащим преимущества компании;  */
+#item2 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+#item2>* {
+    margin: auto;
+}
+
+.sliderimg {
+    width: 150px;
+}
+
+/* 3. Блок, содержащий особенности гироскутеров, электросамокотов и сигвеев;  */
+#item3 {
+    color: black;
+}
+
+/* 4. Блок со списком товаров: фото, название, цена, вид;  */
+#item4>div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#item4>div>article>img {
+    height: 20vw;
+    margin: auto;
+}
+
+h2 {
+    font-size: 1.2vw;
+}
+
+/* 5. Фильтр по виду: Всё, Гироскутеры, Электросамокаты, Сигвеи;  */
+#item5 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#item5>* {
+    height: 3vw;
+    margin: 1vw;
+}
+
+/* 6. Блок, содержащий информацию о консультантах;  */
+#item6 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#item6>article>img {
+    height: 15vw;
+}
+
+/* 7. Блок, содержащий бренды, представленные в магазине;  */
+#item7 {
+    grid-template-columns: repeat(7, 1fr);
+}
+
+#item7>* {
+    font-size: 1.5vw;
+    color: rgb(9, 101, 155);
+}
+
+/* 8. Блок, содержащий полезную информацию: фото и текст к нему;  */
+#item8 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#item8>* {
+    margin: 1vw auto;
+}
+
+#item8>article>img {
+    height: 15vw;
+
+
+}
+
+/* 9. Блок, содержащий краткую информацию о компании и форму для подписки на email-рассылки. Поля формы: имя, адрес эл. почты, кнопка «подписаться».  */
+#item9 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#item9>form {
+    display: grid;
+}
+
+form>* {
+    font-family: myfont;
+    margin: 1vw;
+}
+
+/* 10. Кнопка, позволяющая вернуться наверх.  */
+#home {
+    position: fixed;
+  
+    right: 30px;
+    bottom: 30px;
+    opacity: 0.5;
+}
+
+#home:hover {
+    opacity: 1;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+
+    html,
+    body {
+        scroll-behavior: smooth;
+    }
+}
