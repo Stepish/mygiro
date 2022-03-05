@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+}
+html{
+    background-color: rgba(168, 207, 243, 0.692);
+}
+body{
+    background-color: rgba(148, 188, 226, 0.692);;
+    width: 80vw;
+    margin: 0 auto;
+}
+/* Основные общие настройки */
+.blok{
+    width: 100%;
+    display: grid;
+}
+/* 1. Шапка, содержащая логотип, телефон компании и кнопку для заказа звонка;  */
+#item1{
+height: 25vw;
+}
+#item1>img{
+    height:inherit;
+}
+
