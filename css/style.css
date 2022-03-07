@@ -1,3 +1,8 @@
+#otstup {
+    height: 50vw;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -20,9 +25,7 @@ body {
 
 /* Основные общие настройки */
 .blok {
-    width: 100%;
-    display: grid;
-    margin: 5vw auto;
+    margin: 1vw auto;
 }
 
 button {
@@ -30,120 +33,155 @@ button {
 }
 
 /* 1. Шапка, содержащая логотип, телефон компании и кнопку для заказа звонка;  */
-#item1 {
-    height: 25vw;
-    grid-template-columns: 1fr 2fr 1fr;
+#header {
+    position: relative;
+    background-image: url('../image/first-page-bg.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: white;
+    height: 50vw;
 }
 
-#item1>img, article {
-    width: 15vw;
-    margin: auto;
+#header>* {
+    display: block;
+    position: absolute;
+}
+
+.logo {
+    width: 25vw;
+}
+
+#header>div {
+    margin: 2vw auto auto 54vw;
+}
+
+.icon {
+    width: 2vw;
 }
 
 h1 {
-    font-size: 12vw;
-    margin: auto;
-    color: black;
+    font-size: 16vw;
+    margin: 11vw auto auto 19vw;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* 2. Блок со слайдером, содержащим преимущества компании;  */
-#item2 {
+
+#slider {
+    display: grid;
     grid-template-columns: repeat(6, 1fr);
 }
 
-#item2>* {
+#slider>* {
     margin: auto;
 }
 
 .sliderimg {
-    width: 150px;
+    width: 15vw;
 }
 
 /* 3. Блок, содержащий особенности гироскутеров, электросамокотов и сигвеев;  */
-#item3 {
-    color: black;
+#info {
+    color: #324074;
+    font-size: 1.5vw;
+    text-align: justify;
 }
 
 /* 4. Блок со списком товаров: фото, название, цена, вид;  */
-#item4>div {
+#spisok>div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
-#item4>div>article>img {
+#spisok>div>* {
+    align-items: center;
+}
+
+#spisok>div>article>img {
     height: 20vw;
-    margin: auto;
+    margin: 0 auto;
+    box-shadow: 0 0 2vw #324074;
 }
 
 h2 {
-    font-size: 1.2vw;
+    font-size: 1.6vw;
 }
 
 /* 5. Фильтр по виду: Всё, Гироскутеры, Электросамокаты, Сигвеи;  */
-#item5 {
+#filtr {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
 
-#item5>* {
+#filtr>* {
     height: 3vw;
     margin: 1vw;
+    font-size: 1.5vw;
+    color: white;
+    background-color: #324074;
 }
 
 /* 6. Блок, содержащий информацию о консультантах;  */
-#item6 {
+#consult {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
 
-#item6>article>img {
+#consult>article>img {
     height: 15vw;
 }
 
 /* 7. Блок, содержащий бренды, представленные в магазине;  */
-#item7 {
+#brend {
+    display: grid;
     grid-template-columns: repeat(7, 1fr);
 }
 
-#item7>* {
+#brend>* {
     font-size: 1.5vw;
-    color: rgb(9, 101, 155);
+    color: #324074;
 }
 
 /* 8. Блок, содержащий полезную информацию: фото и текст к нему;  */
-#item8 {
+#photo {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
 
-#item8>* {
+#photo>* {
     margin: 1vw auto;
 }
 
-#item8>article>img {
+#photo>article>img {
     height: 15vw;
-
-
+    box-shadow: 0 0 2vw #324074;
 }
 
 /* 9. Блок, содержащий краткую информацию о компании и форму для подписки на email-рассылки. Поля формы: имя, адрес эл. почты, кнопка «подписаться».  */
-#item9 {
+#form {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    color: #324074;
+    text-align: justify;
 }
 
-#item9>form {
+#form>form {
     display: grid;
 }
 
 form>* {
     font-family: myfont;
     margin: 1vw;
+    box-shadow: 0 0 2vw #324074;
 }
 
 /* 10. Кнопка, позволяющая вернуться наверх.  */
 #home {
     position: fixed;
-  
     right: 30px;
     bottom: 30px;
     opacity: 0.5;
+
 }
 
 #home:hover {
